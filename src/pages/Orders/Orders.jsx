@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import './Orders.css'
 import UserHeader from './UserHeader'
 import OrdersData from './OrdersData'
-import { deleteCookie, getCookie } from './services/cookies'
+import { deleteCookie, getCookie } from '../../services/cookies'
 
 function Orders({setIsLoggedIn}) {
 

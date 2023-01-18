@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 //styles
 import './LoginForm.css'
-import { setCookie, getCookie } from '../Orders/services/cookies';
+import { setCookie, getCookie } from '../../services/cookies';
 
 
 function LoginForm({login, setIsLoggedIn}) {
