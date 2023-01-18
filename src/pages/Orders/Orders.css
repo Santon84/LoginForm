@@ -64,6 +64,29 @@
 .orders__table li:not(:first-child) .cell-id {
   text-align: center;
 }
+.orders__table-header {
+  /* Remove default arrow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.orders__table-header select {
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #F7F5F5;
+  border: 1px solid #ECEAEA;
+  border-radius: 10px;
+  height: 32px;
+  padding: 6px 32px;
+}
 .orders__header {
   padding: 10px 13px;
   width: 100%;
@@ -123,6 +146,7 @@
   padding: 20px;
 }
 .orders__body h3 {
+  margin: 0;
   font-weight: 700;
   font-size: 32px;
   line-height: 39px;
