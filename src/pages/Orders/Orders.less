@@ -32,12 +32,15 @@
         
         display:  flex;
         flex-direction: column;
-        gap: 10px;
+        // gap: 10px;
         li:first-child {
             background: #F7F5F5;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
         }
         li {
-            transition: all 1s ease-in;
+            margin: 5px;
             display: flex;
             justify-content: flex-start;
             gap: 5px;
@@ -70,6 +73,7 @@
         li:not(:first-child) {
             .cell-id {
                 text-align: center;
+
             }
         }
         
