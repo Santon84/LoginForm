@@ -71,6 +71,9 @@
             }
         }
         li:not(:first-child) {
+            &:hover {
+                background-color: #F7F5F5;
+            }
             .cell-id {
                 text-align: center;
 
@@ -87,6 +90,7 @@
         align-items: center;
         padding: 20px;
         select {
+            cursor: pointer;
             font-weight: 700;
             font-size: 14px;
             line-height: 17px;
@@ -106,6 +110,11 @@
             padding: 6px 32px;
             @media screen and (max-width:640px){
                 font-size: 16px;
+            }
+            &:hover {
+                
+                background-color: darken(#F7F5F5, 5%);
+                
             }
         }
         
@@ -167,6 +176,7 @@
     &__body {
         margin-left: 5px;
         margin-right: 5px;
+        margin-bottom: 20px;
         text-align: center;
         width: 100%;
         background: #FFFFFF;

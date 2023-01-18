@@ -59,6 +59,9 @@
 .orders__table li .cell-email {
   min-width: 150px;
 }
+.orders__table li:not(:first-child):hover {
+  background-color: #F7F5F5;
+}
 .orders__table li:not(:first-child) .cell-id {
   text-align: center;
 }
@@ -70,6 +73,7 @@
   padding: 20px;
 }
 .orders__table-header select {
+  cursor: pointer;
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
@@ -92,6 +96,9 @@
   .orders__table-header select {
     font-size: 16px;
   }
+}
+.orders__table-header select:hover {
+  background-color: #ece7e7;
 }
 .orders__header {
   margin-bottom: 10px;
@@ -148,6 +155,7 @@
 .orders__body {
   margin-left: 5px;
   margin-right: 5px;
+  margin-bottom: 20px;
   text-align: center;
   width: 100%;
   background: #FFFFFF;
