@@ -1,0 +1,59 @@
+:root {
+    --button-color: 134, 205, 137;
+}
+.loginform {
+
+    &__wrapper {
+    
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        width: 403px;
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            input {
+                
+                background: #FAFAFA;
+                border: 1px solid #D9D9D9;
+                border-radius: 10px;
+                padding: 0;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+                
+                padding: 17px 22px;
+                &::placeholder {
+                    color:#C1C0C0;
+                }
+            }
+        
+            input[type='submit'] {
+                background: rgba(var(--button-color),1);
+                width: 100%;
+                color: #FFFFFF;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 39px;
+                text-transform: uppercase;
+                cursor: pointer;
+                &:hover {
+                    background:rgba(var(--button-color), 0.8);
+                }
+            }
+        
+        }
+        
+    }
+    &__undertext {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #A2A3A7;
+        margin: 0;
+    }
+}
