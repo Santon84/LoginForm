@@ -3,7 +3,7 @@ import React from 'react'
 function OrdersHeader() {
   return (
     <div>
-      <h3>ЗАКАЗЫ</h3>
+      <h3>Заказы</h3>
     </div>
   )
 }

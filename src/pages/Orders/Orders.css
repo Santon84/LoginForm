@@ -34,6 +34,7 @@
   background: #F7F5F5;
 }
 .orders__table li {
+  transition: all 1s ease-in;
   display: flex;
   justify-content: flex-start;
   gap: 5px;
@@ -50,6 +51,7 @@
 .orders__table li .cell {
   overflow: hidden;
   width: 100%;
+  animation: fadein 1s ease-in-out;
 }
 .orders__table li .cell-id {
   width: 70%;
@@ -123,4 +125,12 @@
   font-size: 32px;
   line-height: 39px;
   color: #000000;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
