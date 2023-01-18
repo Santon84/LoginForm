@@ -78,10 +78,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 .orders__header .user-image {
   width: 36px;
+  margin-right: 20px;
   height: 36px;
   border-radius: 50%;
   background-color: #B9B9B9;
