@@ -35,6 +35,7 @@
   font-size: 32px;
   line-height: 39px;
   text-transform: uppercase;
+  -webkit-appearance: none;
   cursor: pointer;
 }
 .loginform__wrapper form input[type='submit']:hover {
