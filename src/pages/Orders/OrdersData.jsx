@@ -13,7 +13,7 @@ const tableColumnsNames = {id: 'Номер заказа', email: 'Email', amount
 const color = '#F7F5F5';
 
 useEffect(() => {
-  fetch('http://localhost:5000/orders.json')
+  fetch('https://login-form-swart-nu.vercel.app/orders.json')
   .then(res => res.json())
   .then(json => {
     setOrders(json.orders);
