@@ -12,11 +12,8 @@ function LoginForm({login, setIsLoggedIn}) {
 
   const doLogin = (e) => {
     e.preventDefault();
-    console.log('Login');
     if (!validateInput()) return;
-    alert(users);
     
-    console.log(users);
     for (let i=0; i<users.length; i++) {
       alert('email ':users[i].email);
       if (users[i].email === email && users[i].password === password){
@@ -29,17 +26,6 @@ function LoginForm({login, setIsLoggedIn}) {
       }
     }
    
-    // users.forEach(user => {
-    //     if (user.email === email && user.password === password){
-    //       setCookie('email', user.email);
-    //       setCookie('user-name', user.name);
-    //       setCookie('isLogged', true);
-    //       login();
-    //       console.log('return');
-    //       return;
-    //     }
-    //     console.log(user.id);
-    //   })
       
     alert('Not valid');
     
@@ -77,10 +63,6 @@ useEffect(() => {
 
 },[])
 
-useEffect(() => {
-  alert('users');
-  alert(users);
-},[users])
 
   return (
     <div className='loginform'>
