@@ -18,7 +18,7 @@ function LoginForm({login, setIsLoggedIn}) {
     
     console.log(users);
     for (let i=0; i<users.length; i++) {
-      
+      console.log(users[i].email);
       if (users[i].email === email && users[i].password === password){
         setCookie('email', users[i].email);
         setCookie('user-name', users[i].name);
@@ -28,7 +28,7 @@ function LoginForm({login, setIsLoggedIn}) {
         return;
       }
     }
-    console.log('after for');
+   
     // users.forEach(user => {
     //     if (user.email === email && user.password === password){
     //       setCookie('email', user.email);
@@ -64,7 +64,7 @@ function LoginForm({login, setIsLoggedIn}) {
 
 useEffect(() => {
   const isLogged = getCookie('isLogged');
-  console.log(isLogged);
+  
   if (isLogged) {
     setIsLoggedIn(true);
   }else {
