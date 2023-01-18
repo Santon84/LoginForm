@@ -51,11 +51,7 @@ const showMoreClick = () => {
         }
         return prev + 5});
     }
-    if (visibleItems > orders.length)
-    {
-      console.log('HIDE BUTTON');
-      
-    } 
+    
     
 
   },1000);
@@ -81,7 +77,7 @@ console.log('Rerender orders');
             size={20}
             />  
             }
-            <button ref={buttonMore} className='btn-show-more' onClick={showMoreClick}>Показать еще</button>
+            <button ref={buttonMore} className='btn-show-more' onClick={showMoreClick}>Показать еще...</button>
               
         </section>
     </>
