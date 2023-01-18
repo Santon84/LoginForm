@@ -14,8 +14,8 @@ function LoginForm({login, setIsLoggedIn}) {
     e.preventDefault();
     console.log('Login');
     //if (!validateInput()) return;
-    alert(email);
-    alert(password);
+    alert(users);
+    
     console.log(users);
     for (let i=0; i<users.length; i++) {
       
