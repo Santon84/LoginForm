@@ -15,7 +15,7 @@ function LoginForm({login, setIsLoggedIn}) {
     if (!validateInput()) return;
     
     for (let i=0; i<users.length; i++) {
-      alert('email ':users[i].email);
+      
       if (users[i].email === email && users[i].password === password){
         setCookie('email', users[i].email);
         setCookie('user-name', users[i].name);
@@ -57,6 +57,7 @@ useEffect(() => {
     fetch('https://login-form-swart-nu.vercel.app/users.json')
     .then(res => res.json())
     .then(json => setUsers(json.users))
+    .catch(err => alert(err));
   }
   
   
