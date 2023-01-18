@@ -13,7 +13,7 @@ function LoginForm({login, setIsLoggedIn}) {
   const doLogin = (e) => {
     e.preventDefault();
     console.log('Login');
-    //if (!validateInput()) return;
+    if (!validateInput()) return;
     alert(users);
     
     console.log(users);
@@ -76,6 +76,11 @@ useEffect(() => {
   
 
 },[])
+
+useEffect(() => {
+  alert('users');
+  alert(users);
+},[users])
 
   return (
     <div className='loginform'>
