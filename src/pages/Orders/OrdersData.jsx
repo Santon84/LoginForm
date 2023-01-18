@@ -6,6 +6,10 @@ import PulseLoader from "react-spinners/PulseLoader";
 
 function OrdersData() {
 const [orders, setOrders] = useState(null);
+const [sortedOrders, setSortedOrders] = useState(null);
+
+const [selectedSort, setSelectedSort] = useState('id');
+const [sortingValues] = useState([{id:'По номеру заказа'}, {amount: 'По сумме заказа'}, {date: 'По дате заказа'}])
 const [visibleItems, setVisibleItems] = useState(5);
 const [isLoading, setIsLoading] = useState(true);
 const buttonMore = useRef();
@@ -17,10 +21,23 @@ useEffect(() => {
   .then(res => res.json())
   .then(json => {
     setOrders(json.orders);
+    
     setIsLoading(false);
     })
 
 },[])
+
+useEffect(() => {
+  setSortedOrders(orders);
+},[orders]);
+
+
+const handleSelectedSort = (value) => {
+
+setSelectedSort(value);
+setSortedOrders([...orders]?.sort((a,b) => a[value] - b[value] ))
+
+}
 
 const showMoreClick = () => {
   setIsLoading(true);
@@ -45,17 +62,18 @@ const showMoreClick = () => {
   
 
 }
-  
+console.log('Rerender orders');
   return (
     <>
       <section key='body' className='orders__body'>
-            <OrdersHeader />
+        
+            <OrdersHeader sortingValues={sortingValues} selectedSort={selectedSort} handleSelectedSort={handleSelectedSort}/>
             <Table>
               <TableRow orderData={tableColumnsNames} />
-              {orders ? 
-              orders.slice(0,visibleItems).map(order => {
-                return <TableRow orderData={order}/>
-              }) : ''}
+             
+              {sortedOrders?.slice(0, visibleItems).map(order => {
+                return <TableRow key={order.id} orderData={order}/>
+              })} 
             </Table>
             
             {isLoading && <PulseLoader 

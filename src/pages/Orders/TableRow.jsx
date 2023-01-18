@@ -3,10 +3,7 @@ import React, { useEffect, memo } from 'react'
 function TableRow({orderData}) {
 const {id, email, amount, date} = orderData;
 
-useEffect(() => {
-    console.log('DATA');
-    console.log(orderData);
-},[])
+
 
   return (
     <>
