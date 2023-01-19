@@ -26,6 +26,13 @@
   line-height: 29px;
   padding: 17px 22px;
 }
+@media screen and (min-width: 640px) {
+  .loginform__wrapper form input {
+    width: 403px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .loginform__wrapper form input::placeholder {
   color: #C1C0C0;
 }
