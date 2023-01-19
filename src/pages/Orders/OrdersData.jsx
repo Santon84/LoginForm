@@ -24,6 +24,7 @@ useEffect(() => {
     
     setIsLoading(false);
     })
+  .catch(err => alert(err));
 
 },[])
 

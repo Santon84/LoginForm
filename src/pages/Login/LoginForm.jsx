@@ -16,7 +16,7 @@ function LoginForm({login, setIsLoggedIn}) {
     
     for (let i=0; i<users.length; i++) {
       
-      if (users[i].email === email && users[i].password === password){
+      if (users[i].email === email.toLowerCase() && users[i].password === password){
         setCookie('email', users[i].email);
         setCookie('user-name', users[i].name);
         setCookie('isLogged', true);
